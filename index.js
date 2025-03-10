@@ -6,17 +6,17 @@ function contact(event) {
     event.preventDefault();
     const loading = document.querySelector(".modal__overlay--loading");
     const success = document.querySelector(".modal__overlay--success");
-    loading.classList += " modal__overlay--visible";
-    email.js
+    loading.classList.add("modal__overlay--visible");
+    emailjs
         .sendForm(
-            "service_acyoiqr",
-            "template_xaoa2aq",
+            "service_6fhg2g9",
+            "template_q8857x3",
             event.target,
-            "O1vaNsh0ogREEMEKU"
+            { publicKey: "rHHhJPcYVXc5501Et" }
         )
         .then(() => {
             loading.classList.remove("modal__overlay--visible");
-            success.classList += " modal__overlay--visible";
+            success.classList.add("modal__overlay--visible");
         })
         .catch(() => {
             loading.classList.remove("modal__overlay--visible");
