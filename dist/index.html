@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juan Tejeda</title>
+    <script src="https://kit.fontawesome.com/c3d18c2968.js" crossorigin="anonymous"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "rHHhJPcYVXc5501Et",
+      });
+   })();
+</script>
+  <script type="module" crossorigin src="/assets/index-Dx95fhQI.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-CotQ6Bc9.css">
+</head>
+<body>
+    <section id="landing-page" onmousemove="moveBackground(event)">
+        <nav>
+            <figure>
+                <img id="personal-logo" src="/assets/logo-BPsoi12K.svg" alt="">
+            </figure>
+            <ul class="nav__link--list">
+                <li class="nav__link">
+                    <a href="#" class="
+                    nav__link--anchor
+                    link__hover-effect
+                    link__hover-effect--black">Resume</a>
+                </li>
+                <li class="nav__link">
+                    <a href="#projects" class="
+                    nav__link--anchor
+                    link__hover-effect
+                    link__hover-effect--black">Projects</a>
+                </li>
+                <li class="nav__link" onclick="toggleModal()">
+                    <a href="#" class="
+                    nav__link--anchor
+                    link__hover-effect
+                    link__hover-effect--black">Contact</a>
+                </li>
+                <li class="nav__link click" onclick="toggleContrast()">
+                    <a href="#" class="
+                    nav__link--anchor
+                    nav__hover-effect
+                    nav__hover-effect--black"><i class="fa-solid fa-circle-half-stroke"></i></a>
+                </li>
+            </ul>
+        </nav>
+        <header class="header">
+            <div class="header__content">
+                <h1 class="title">Hey</h1>
+                <h1 class="title red">I'm Juan</h1>
+                <p class="header__para">
+                    As a <b class="red">frontend engineer</b>, I bring ideas to life through clean, efficient code and intuitive design. 
+                    <br>
+                    Here's more <b class="red click" onclick="toggleModal()">about me</b>
+                </p>
+                <div class="social__list">
+                    <a href="" target="_blank" class="social__link click">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                    <a href="" target="_blank" class="social__link click">
+                        <i class="fa-brands fa-github"></i>                    
+                    </a>
+                    <a href="" target="_blank" class="social__link click">
+                        <i class="fa-solid fa-file-pdf"></i>                    
+                    </a>
+                </div>
+            </div>
+        </header>
+        <a href="#">
+        <button class="mail__btn click" onclick="toggleModal()">
+            <i class="fas fa-envelope"></i>
+        </button>
+        </a>
+        <a href="#projects" class="scroll">
+            <div class="scroll__icon click"></div>
+        </a>
+        <div class="modal">
+            <div class="modal__half modal__about">
+                <h3 class="modal__title title__about">Heres a bit about me,</h3>
+                <h4 class="modal__sub-title modal__sub-title--about">frontend software engineer</h4>
+                <p class="modal__para">
+                    I'm a 21 year-old Australian frontend software engineer with experience developing websites for top-tech companies like Google and Canva. 
+                    <br>
+                    I currently solve extremely difficult engineering problems every day with React, TypeScript and MobX in Canva's Video team.
+                </p>
+                <div class="modal__languages">
+                    <figure class="modal__language">
+                        <img class="modal__language--img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/240px-HTML5_Badge.svg.png" alt="">
+                        <span class="language__name">HTML</span>
+                    </figure>
+                    <figure class="modal__language">
+                        <img class="modal__language--img" src="https://cdn.iconscout.com/icon/free/png-256/css-131-722685.png" alt="">
+                        <span class="language__name">CSS</span>
+                    </figure>
+                    <figure class="modal__language">
+                        <img class="modal__language--img" src="https://cdn.iconscout.com/icon/free/png-256/javascript-1-225993.png" alt="">
+                        <span class="language__name">JavaScript</span>
+                    </figure>
+                    <figure class="modal__language">
+                        <img class="modal__language--img" src="https://cdn.iconscout.com/icon/free/png-256/react-3-1175109.png" alt="">
+                        <span class="language__name">React</span>
+                    </figure>
+                </div>
+            </div>
+            <div class="modal__half modal__contact">
+                <i class="fas fa-times modal__exit click" onclick="toggleModal()"></i>
+                <h3 class="modal__title modal__title--contact">
+                    Let's have a chat!
+                </h3>
+                <h4 class="modal__sub-title modal__sub-title--contact">
+                    I'm currently open to new opportunities.
+                </h4>
+                <form id="contact__form" onsubmit="contact(event)">
+                    <div class="form__item">
+                        <label class="form__item--label">Name</label>
+                        <input class="input" name="user_name" type="text" required></input>
+                    </div>
+                    <div class="form__item">
+                        <label class="form__item--label">Email</label>
+                        <input class="input" name="user_email" type="email" required></input>
+                    </div>
+                    <div class="form__item">
+                        <label class="form__item--label">Message</label>
+                        <textarea class="input" name="message" type="text" required></textarea>
+                    </div>
+                    <button id="contact__submit" class="form__submit">
+                        Send it my way!
+                    </button>
+                </form>
+                <div class="modal__overlay modal__overlay--loading">
+                    <i class="fas fa-spinner"></i>
+                </div>
+                <div class="modal__overlay modal__overlay--success">
+                    Thanks for the message! Looking forward to speaking with you soon.
+                </div>
+            </div>
+            
+        </div>
+        <img src="data:image/svg+xml,%3csvg%20width='30'%20height='30'%20viewBox='0%200%20362%20181'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M331%20181C331%2098.1573%20263.843%2031%20181%2031C98.1573%2031%2031%2098.1573%2031%20181'%20stroke='%2367D5E0'%20stroke-width='62'/%3e%3c/svg%3e" class="shape shape--0">
+        <img src="data:image/svg+xml,%3csvg%20width='20'%20height='20'%20viewBox='0%200%20300%20300'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M272.5%20150C272.5%20217.655%20217.655%20272.5%20150%20272.5C82.3451%20272.5%2027.5%20217.655%2027.5%20150C27.5%2082.3451%2082.3451%2027.5%20150%2027.5C217.655%2027.5%20272.5%2082.3451%20272.5%20150Z'%20stroke='%23ff328f'%20stroke-width='55'/%3e%3c/svg%3e" class="shape shape--1">
+        <img src="data:image/svg+xml,%3csvg%20width='35'%20height='35'%20viewBox='0%200%20347%20132'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cline%20x1='71.6158'%20y1='27.3127'%20x2='25.3127'%20y2='106.384'%20stroke='%2367D5E0'%20stroke-width='37'%20stroke-linecap='round'/%3e%3cline%20x1='165.616'%20y1='27.3127'%20x2='119.313'%20y2='106.384'%20stroke='%2367D5E0'%20stroke-width='37'%20stroke-linecap='round'/%3e%3cline%20x1='268.616'%20y1='27.3127'%20x2='222.313'%20y2='106.384'%20stroke='%2367D5E0'%20stroke-width='37'%20stroke-linecap='round'/%3e%3cline%20x1='165.755'%20y1='26.6017'%20x2='218.142'%20y2='101.781'%20stroke='%2367D5E0'%20stroke-width='37'%20stroke-linecap='round'/%3e%3cline%20x1='268.755'%20y1='26.6017'%20x2='321.142'%20y2='101.781'%20stroke='%2367D5E0'%20stroke-width='37'%20stroke-linecap='round'/%3e%3cline%20x1='74.0952'%20y1='26.3981'%20x2='117.922'%20y2='106.868'%20stroke='%2367D5E0'%20stroke-width='37'%20stroke-linecap='round'/%3e%3c/svg%3e" class="shape shape--2">
+        <img src="data:image/svg+xml,%3csvg%20width='20'%20height='20'%20viewBox='0%200%20300%20300'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M272.5%20150C272.5%20217.655%20217.655%20272.5%20150%20272.5C82.3451%20272.5%2027.5%20217.655%2027.5%20150C27.5%2082.3451%2082.3451%2027.5%20150%2027.5C217.655%2027.5%20272.5%2082.3451%20272.5%20150Z'%20stroke='%23ff328f'%20stroke-width='55'/%3e%3c/svg%3e" class="shape shape--3">
+        <img src="data:image/svg+xml,%3csvg%20width='25'%20height='25'%20viewBox='0%200%20159%20134'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M16.9451%20124L79.5%2018.612L142.055%20124H16.9451Z'%20stroke='%235D3EFF'%20stroke-width='19'/%3e%3c/svg%3e" class="shape shape--4">
+        <img src="data:image/svg+xml,%3csvg%20width='20'%20height='20'%20viewBox='0%200%20300%20300'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M272.5%20150C272.5%20217.655%20217.655%20272.5%20150%20272.5C82.3451%20272.5%2027.5%20217.655%2027.5%20150C27.5%2082.3451%2082.3451%2027.5%20150%2027.5C217.655%2027.5%20272.5%2082.3451%20272.5%20150Z'%20stroke='%23ff328f'%20stroke-width='55'/%3e%3c/svg%3e" class="shape shape--5">
+        <img src="data:image/svg+xml,%3csvg%20width='35'%20height='35'%20viewBox='0%200%20347%20132'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cline%20x1='71.6158'%20y1='27.3127'%20x2='25.3127'%20y2='106.384'%20stroke='%2367D5E0'%20stroke-width='37'%20stroke-linecap='round'/%3e%3cline%20x1='165.616'%20y1='27.3127'%20x2='119.313'%20y2='106.384'%20stroke='%2367D5E0'%20stroke-width='37'%20stroke-linecap='round'/%3e%3cline%20x1='268.616'%20y1='27.3127'%20x2='222.313'%20y2='106.384'%20stroke='%2367D5E0'%20stroke-width='37'%20stroke-linecap='round'/%3e%3cline%20x1='165.755'%20y1='26.6017'%20x2='218.142'%20y2='101.781'%20stroke='%2367D5E0'%20stroke-width='37'%20stroke-linecap='round'/%3e%3cline%20x1='268.755'%20y1='26.6017'%20x2='321.142'%20y2='101.781'%20stroke='%2367D5E0'%20stroke-width='37'%20stroke-linecap='round'/%3e%3cline%20x1='74.0952'%20y1='26.3981'%20x2='117.922'%20y2='106.868'%20stroke='%2367D5E0'%20stroke-width='37'%20stroke-linecap='round'/%3e%3c/svg%3e" class="shape shape--6">
+        <img src="data:image/svg+xml,%3csvg%20width='20'%20height='20'%20viewBox='0%200%20300%20300'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M272.5%20150C272.5%20217.655%20217.655%20272.5%20150%20272.5C82.3451%20272.5%2027.5%20217.655%2027.5%20150C27.5%2082.3451%2082.3451%2027.5%20150%2027.5C217.655%2027.5%20272.5%2082.3451%20272.5%20150Z'%20stroke='%23ff328f'%20stroke-width='55'/%3e%3c/svg%3e" class="shape shape--7">
+        <img src="data:image/svg+xml,%3csvg%20width='30'%20height='30'%20viewBox='0%200%20362%20181'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M331%20181C331%2098.1573%20263.843%2031%20181%2031C98.1573%2031%2031%2098.1573%2031%20181'%20stroke='%2367D5E0'%20stroke-width='62'/%3e%3c/svg%3e" class="shape shape--8">
+    </section>
+    <section id="projects">
+        <div class="container">
+            <div class="row">
+                <h1 class="section__title">
+                    Here are some of my <span class="red">projects</span>
+                </h1>
+                <ul class="project__list">
+                    <li class="project">
+                        <div class="project__wrapper">
+                            <img src="/assets/blinker%20mockup-Dzi3WzAF.png" class="project__img" alt="">
+                            <div class="project__wrapper--bg"></div>
+                            <div class="project__description">
+                                <h3 class="project__description--title">
+                                    Car sales project
+                                </h3>
+                                <h4 class="project__description--subtitle">
+                                    Html,CSS, JavaScript, Vue, Vuex
+                                </h4>
+                                <p class="project__description--para">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit eveniet eos, nemo omnis architecto id magni qui deserunt ratione dolores
+                                </p>
+                                <div class="project__description--links">
+                                    <a href="#" class="project__description--link">
+                                        <i class="fa-brands fa-github"></i>
+                                    </a>
+                                    <a href="#" class="project__description--link">
+                                        <i class="fas fa-link"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <footer>
+       <div class="container">
+        <div class="row footer__row">
+            <a href="#" class="footer__anchor">
+              <figure class="footer__logo">
+                <img src="/assets/logo-BPsoi12K.svg" class="footer__logo--img" alt="">
+              </figure>
+              <span class="footer__logo--popper">
+                Top
+                <i class="fas fa-arrow-up"></i>
+              </span>
+            </a>
+        <div class="footer__social--list">
+            <a href="#" class="
+            footer__social--link
+            link__hover-effect
+            link__hover-effect--white">Github</a>
+            <a href="#" class="
+            footer__social--link
+            link__hover-effect
+            link__hover-effect--white">Linkedin</a>
+            <a href="#" class="
+            footer__social--link
+            link__hover-effect
+            link__hover-effect--white" onclick="toggleModal()">Contact</a>
+            <a href="#" class="
+            footer__social--link
+            link__hover-effect
+            link__hover-effect--white">Resume</a>
+        </div>
+        <div class="footer__copyright">Made by Juan Tejeda 2025</div>
+       </div>
+    </div>
+    </footer>
+</body>
+</html>
