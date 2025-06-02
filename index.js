@@ -14,8 +14,6 @@ function moveBackground(event) {
     }
 }
 
-window.moveBackground = moveBackground;
-
 
 function toggleContrast() {
     contrastToggle = !contrastToggle;
