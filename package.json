@@ -6,10 +6,9 @@
     "vite": "^6.3.5"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "vite",
-    "build": "vite build",
-    "start": "vite preview"
+   "dev": "vite",
+  "build": "npx vite build",
+  "start": "vite preview"
 
   },
   "keywords": [],
